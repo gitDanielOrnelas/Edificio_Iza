@@ -76,6 +76,20 @@
                 margin-left: 8px;
             }
         }
+
+        .board {
+            background-color: #eef7ff;
+            border: 1px solid #007BFF;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .board ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .board li {
+            margin-bottom: 6px;
+        }
     </style>
 </head>
 <body>
@@ -122,9 +136,35 @@
     <section>
         <h2>Aplicativo LSC Administradora 📲</h2>
         <p class="info">
-            URL: <a href="https://lscadministrado.superlogica.net/clients/areadocondomino" target="_blank">Área do Condômino</a><br>
+            URL: <a href="https://lscadministrado.superlogica.net/clients/areadocondomino" target="_blank">https://lscadministrado.superlogica.net/clients/areadocondomino</a><br>
             Ou via Play Store ou App Store: <span class="highlight">Aplicativo Condomínio (da Superlogica)</span>
         </p>
     </section>
+
+    <section class="board">
+        <h2>Quadro de Avisos (Últimos 7 Dias) 📊</h2>
+        <ul id="avisos">
+            <!-- Os avisos serão inseridos aqui dinamicamente -->
+        </ul>
+    </section>
+
+    <script>
+        // Lista de avisos simulada
+        const avisos = [
+            "Manutenção na garagem será realizada dia 10/12.",
+            "Reunião da assembleia agendada para 15/12 às 19:00.",
+            "Nova coleta de recicláveis: Segunda-feira, 11/12.",
+            "Conserto do elevador de serviço concluído em 09/12."
+        ];
+
+        const ulAvisos = document.getElementById('avisos');
+
+        // Adiciona avisos à lista
+        avisos.forEach(aviso => {
+            const li = document.createElement('li');
+            li.textContent = aviso;
+            ulAvisos.appendChild(li);
+        });
+    </script>
 </body>
 </html>
