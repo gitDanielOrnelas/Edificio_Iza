@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regras de Boa Convivência</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f8fc;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    ul li {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #e8f5e9;
+      border: 1px solid #c8e6c9;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Regras de Boa Convivência</h1>
+  </header>
+  <main>
+    <p>Confira abaixo algumas práticas essenciais para garantir uma boa convivência no condomínio:</p>
+    <ul>
+      <li><strong>Controle de Ruídos:</strong> Evite barulhos altos, como música e TV, especialmente entre 22h e 8h. Use fones de ouvido sempre que possível.</li>
+      <li><strong>Cuidados ao Arrastar Móveis:</strong> Use protetores de feltro para evitar ruídos ao arrastar móveis, principalmente em horários de descanso.</li>
+      <li><strong>Evitar Itens Caindo no Chão:</strong> Manuseie objetos pesados com cuidado para evitar impactos e ruídos.</li>
+      <li><strong>Uso do Elevador:</strong> Chame o elevador mais próximo para economizar energia e tempo.</li>
+      <li><strong>Zelo em Áreas Comuns:</strong> Preserve a limpeza e organização das áreas compartilhadas, evitando deixar lixo ou objetos pessoais.</li>
+      <li><strong>Regras de Animais de Estimação:</strong> Respeite as normas do prédio para o transporte e limpeza de animais.</li>
+      <li><strong>Recepção de Encomendas:</strong> Organize-se para evitar acúmulo de pacotes na portaria.</li>
+      <li><strong>Avisos Sobre Reformas:</strong> Avise a administração e vizinhos sobre reformas, respeitando os horários permitidos.</li>
+      <li><strong>Garagem Sem Obstrução:</strong> Estacione corretamente para não atrapalhar os demais moradores.</li>
+      <li><strong>Diálogo e Respeito:</strong> Mantenha boa comunicação e esteja aberto a resolver conflitos de forma amigável.</li>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 Condomínio Exemplo. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
