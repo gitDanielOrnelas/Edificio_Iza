@@ -23,7 +23,7 @@
         }
         .container {
             margin: 50px auto;
-            max-width: 600px;
+            max-width: 700px;
         }
         .construction {
             margin: 20px auto;
@@ -36,6 +36,26 @@
             width: 150px;
             margin-bottom: 20px;
         }
+        .ideas ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .ideas li {
+            margin-bottom: 10px;
+        }
+        .pdf-link {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 20px;
+            background-color: #0077b6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .pdf-link:hover {
+            background-color: #005f8f;
+        }
         footer {
             margin-top: 50px;
             padding: 10px 0;
@@ -45,32 +65,39 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ideias</h1>
-        <p>A página está em construção 🚧</p>
-    </header>
-    <div class="container">
-        <div class="construction">
-            <img src="https://cdn-icons-png.flaticon.com/512/3456/3456426.png" alt="Em Construção">
-            <h2>Estamos trabalhando nisso!</h2>
-        </div>
-        <section class="ideas">
-            <h2>Algumas Ideias pensadas:</h2>
-            <ul>
-                Bicicletário<br>
-                Fechamento de garagens<br>
-                Salão de Festas<br>
-                Espaço Convivência<br>
-                Reuso de água da chuva<br>
-                Painel Solar<br>
-                Mercadinho autônomo<br>
-                Lixeira para o lixo reciclável
-                Individualização de água e gás
-            </ul>
-        </section>
+
+<header>
+    <h1>Ideias</h1>
+    <p>A página está em construção 🚧</p>
+</header>
+
+<div class="container">
+    <div class="construction">
+        <img src="https://cdn-icons-png.flaticon.com/512/3456/3456426.png" alt="Em Construção">
+        <h2>Estamos trabalhando nisso!</h2>
     </div>
-    <footer>
-        <p>© 2025 - Ideias em Construção</p>
-    </footer>
+
+    <section class="ideas">
+        <h2>Ideias pensadas:</h2>
+        <ul>
+            <li>Iluminação indireta, poste de luz na entrada e garagem do prédio, com sinalizadores de entrada/saída de veículos. (+ Segurança)</li>
+            <li>Instalação de um bicicletário na garagem. (+ Organização e zelo)</li>
+            <li>Melhoras no hall de entrada e elevadores. (+ Valor e cuidado)</li>
+            <li>Instalação de locker, fechamento da entrada com telhado e novo portão. (+ Praticidade)</li>
+            <li>Possibilidade de fechamento das garagens abertas. (+ Valorização do imóvel e do bem estacionado)</li>
+            <li>Melhorias em geral. (+ Informação e benfeitoria)</li>
+            <li>Salão de festas e espaço convivência</li>
+        </ul>
+
+        <a class="pdf-link" href="docs/Ideias-Iza.pdf" target="_blank">
+            📄 Ver documento completo de ideias (PDF)
+        </a>
+    </section>
+</div>
+
+<footer>
+    <p>© 2025 - Ideias em Construção</p>
+</footer>
+
 </body>
 </html>
