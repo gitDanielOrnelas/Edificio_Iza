@@ -6,24 +6,24 @@
     <title>Informações do Edifício</title>
 
     <style>
-            body {
-                margin: 0;
-                background-color: #f4f4f4; /* contraste com o menu */
-                font-family: Arial, sans-serif;
-            }
+        body {
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+        }
 
-            h1 {
-                text-align: center;
-                margin: 10px 0 20px 0; /* controla topo e base */
-            }
+        h1 {
+            text-align: center;
+            margin: 10px 0 20px;
+        }
 
         /* ===== MENU ===== */
         nav {
             background-color: #ffffff;
-            border-bottom: 2px solid #dcdcdc; /* força a divisão aparecer */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            border-bottom: 2px solid #dcdcdc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
             padding: 10px 0;
-            margin: 0;
         }
 
         nav ul {
@@ -32,63 +32,42 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
-        nav ul li {
-            position: relative;
-        }
-
-        nav ul li a {
+        nav a {
             text-decoration: none;
             color: #007BFF;
             font-weight: bold;
             padding: 8px 12px;
             border-radius: 5px;
-            display: block;
         }
 
-        nav ul li a:hover {
+        nav a:hover {
             background-color: #eef7ff;
         }
 
-        /* Submenu */
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 8px 0;
-            border-radius: 5px;
-            min-width: 180px;
-            z-index: 1000;
-        }
-
-        nav ul li ul li ul {
-            top: 0;
-            left: 100%;
-        }
-
-        nav ul li:hover > ul {
-            display: block;
-        }
-
-        /* ===== CONTAINER CENTRAL ===== */
+        /* ===== CONTAINER ===== */
         .container {
-            max-width: 900px;
-            margin: 10px auto; /* diminui espaço do topo */
-            padding: 20px;
+            max-width: 1200px;
+            margin: 10px auto;
+            padding: 10px;
         }
 
-        /* ===== CONTEÚDO ===== */
+        /* ===== GRID SUPERIOR ===== */
+        .top-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 16px;
+        }
+
+        /* ===== CARDS ===== */
         section {
-            margin-bottom: 16px;
-            padding: 15px;
+            background-color: #ffffff;
             border: 1px solid #ccc;
             border-radius: 8px;
-            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 16px;
         }
 
         section h2 {
@@ -100,41 +79,28 @@
         }
 
         .info {
-            margin-left: 10px;
+            margin-left: 8px;
+        }
+
+        .center-card {
+            text-align: center;
         }
 
         /* ===== RESPONSIVO ===== */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .container {
-                margin: 15px;
-                padding: 15px;
+        @media (max-width: 900px) {
+            .top-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
+
 <nav>
     <ul>
         <li><a href="index.html">Início</a></li>
-        <li>
-            <a href="#">Menu</a>
-            <ul>
-                <li>
-                    <a href="#">Vagas</a>
-                    <ul>
-                        <li><a href="vagas.html" target="_blank">Listagem Atual</a></li>
-                        <li><a href="historico.html" target="_blank">Histórico de Vagas</a></li>
-                    </ul>
-                </li>
-                <li><a href="convivencia.html" target="_blank">Dicas de Convivência</a></li>
-                <li><a href="ideias.html" target="_blank">Ideias Futuras</a></li>
-            </ul>
-        </li>
+        <li><a href="#">Menu</a></li>
     </ul>
 </nav>
 
@@ -142,75 +108,81 @@
 
     <h1>Informações Úteis do Edifício</h1>
 
-    <section>
-        <h2>Próxima Assembléia ⚖️</h2>
-        <p class="info"><b>28/01/2026 - Escolha do novo Síndico, 3 novos conselheiros, etc</b></p>
-    </section>
+    <div class="top-grid">
 
-    <section>
-        <h2>Horários para Obras 🚧 🧰</h2>
-        <p class="info">
-            <span class="highlight">Seg à Sexta:</span> 09:00 às 18:00hrs<br>
-            <span class="highlight">Sáb:</span> 09:00 às 15:00hrs<br>
-            <span class="highlight">EcoPonto Guarulhos:</span>
-            <a href="https://maps.app.goo.gl/sK98iTxcB953se4q7" target="_blank">Localização</a>
-        </p>
-    </section>
+        <!-- ESQUERDA -->
+        <div>
+            <section>
+                <h2>Horários para Mudanças 🚚📦</h2>
+                <p class="info">
+                    <span class="highlight">Seg à Sexta:</span> 08:00 às 18:00hrs*<br>
+                    <span class="highlight">Sáb:</span> 09:00 às 18:00hrs*<br>
+                    <span class="highlight">*Nota:</span> <b>Use o elevador de serviço.</b>
+                </p>
+            </section>
 
-    <section>
-        <h2>Horários para Mudanças 🚚📦</h2>
-        <p class="info">
-            <span class="highlight">Seg à Sexta:</span> 08:00 às 18:00hrs*<br>
-            <span class="highlight">Sáb:</span> 09:00 às 18:00hrs*<br>
-            <span class="highlight">*Nota:</span> <b>Utilizem sempre o elevador de serviço.</b>
-        </p>
-    </section>
+            <section>
+                <h2>Horários de Lixo 🗑️</h2>
+                <p class="info">
+                    <span class="highlight">Lixo comum:</span> Qualquer dia<br>
+                    <span class="highlight">Reciclável:</span> Segunda – até 19h<br>
+                    <span class="highlight">Nota:</span> <b>Elevador de serviço.</b>
+                </p>
+            </section>
 
-    <section>
-        <h2>Horários de Lixo 🗑️</h2>
-        <p class="info">
-            <span class="highlight">Lixo comum:</span> Qualquer dia e horário*<br>
-            <span class="highlight">Lixo reciclável:</span> Apenas Segundas-Feiras* – <b>Até 19h</b><br>
-            <span class="highlight">*Nota:</span> <b>Utilizem sempre o elevador de serviço. A chave da lixeira, fica próxima a vaga de moto no térreo.</b>
-        </p>
-    </section>
+            <section>
+                <h2>Vagas de Estacionamento 🚗 🏍</h2>
+                <p class="info">
+                    <b>Carro:</b> carro e moto na mesma vaga<br>
+                    <b>Moto:</b> 2 vagas rotativas<br>
+                    <b>Visitante:</b> exclusivo visitantes
+                </p>
+            </section>
+        </div>
 
-    <section>
-        <h2>Vagas de Estacionamento 🚗 🏍</h2>
-        <p class="info">
-            <b>Carro:</b> Carro e moto na mesma vaga, dentro da demarcação.<br>
-            <b>Moto:</b> 2 vagas rotativas.<br>
-            <b>Visitante:</b> Uso exclusivo de visitantes (sujeito a multa).
-        </p>
-    </section>
+        <!-- CENTRO -->
+        <div class="center-card">
+            <section>
+                <h2>Próxima Assembléia ⚖️</h2>
+                <p class="info">
+                    <b>28/01/2026</b><br>
+                    Escolha do novo Síndico, 3 novos conselheiros, etc
+                </p>
+            </section>
+        </div>
 
-    <section>
-        <h2>Telefones Úteis 📞</h2>
-        <p class="info">
-            <span class="highlight">Síndico (Rinaldo):</span> 11 94750-8475<br>
-            <span class="highlight">Administradora LSC:</span> 11 2475-3150<br>
-            <span class="highlight">Construtor (Gabriel):</span> 11 94754-5475
-        </p>
-    </section>
+        <!-- DIREITA -->
+        <div>
+            <section>
+                <h2>Telefones Úteis 📞</h2>
+                <p class="info">
+                    <span class="highlight">Síndico:</span> 11 94750-8475<br>
+                    <span class="highlight">Administradora:</span> 11 2475-3150<br>
+                    <span class="highlight">Construtor:</span> 11 94754-5475
+                </p>
+            </section>
 
-    <section>
-        <h2>Aplicativo LSC Administradora 📲</h2>
-        <p class="info">
-            <a href="https://lscadministrado.superlogica.net/clients/areadocondomino" target="_blank">
-                Área do Condômino
-            </a><br>
-            App: <span class="highlight">Condomínio (Superlógica)</span>
-        </p>
-    </section>
+            <section>
+                <h2>Aplicativo LSC 📲</h2>
+                <p class="info">
+                    <a href="https://lscadministrado.superlogica.net/clients/areadocondomino" target="_blank">
+                        Área do Condômino
+                    </a><br>
+                    App Condomínio (Superlógica)
+                </p>
+            </section>
 
-    <section>
-        <h2>Aplicativo Gotham Portaria 📲</h2>
-        <p class="info">
-            <a href="https://www.gothamportaria.com.br/" target="_blank">Site</a><br>
-            <a href="https://play.google.com/store/apps/details?id=br.com.center.gothamportaria" target="_blank">Android</a><br>
-            <a href="https://apps.apple.com/ie/app/gotham-portaria/id1613218432" target="_blank">iOS</a>
-        </p>
-    </section>
+            <section>
+                <h2>Gotham Portaria 📲</h2>
+                <p class="info">
+                    <a href="https://www.gothamportaria.com.br/" target="_blank">Site</a><br>
+                    <a href="https://play.google.com/store/apps/details?id=br.com.center.gothamportaria" target="_blank">Android</a><br>
+                    <a href="https://apps.apple.com/ie/app/gotham-portaria/id1613218432" target="_blank">iOS</a>
+                </p>
+            </section>
+        </div>
+
+    </div>
 
 </div>
 
