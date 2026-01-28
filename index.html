@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações do Edifício</title>
-      <style>
+
+    <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 18px;
-            line-height: 1.2;
+            margin: 0;
+            line-height: 1.4;
+            background-color: #f4f4f4;
         }
 
         h1 {
             text-align: center;
+            margin-bottom: 25px;
         }
 
         /* ===== MENU ===== */
         nav {
-            background-color: #f9f9f9;
+            background-color: #ffffff;
             border-bottom: 1px solid #ccc;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 10px;
@@ -49,13 +52,13 @@
             background-color: #eef7ff;
         }
 
-        /* Submenu nível 2 */
+        /* Submenu */
         nav ul li ul {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 8px 0;
             border-radius: 5px;
@@ -63,29 +66,29 @@
             z-index: 1000;
         }
 
-        /* Submenu nível 3 */
         nav ul li ul li ul {
             top: 0;
             left: 100%;
-        }
-
-        nav ul li ul li {
-            display: block;
-            position: relative;
-            white-space: nowrap;
         }
 
         nav ul li:hover > ul {
             display: block;
         }
 
+        /* ===== CONTAINER CENTRAL ===== */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
         /* ===== CONTEÚDO ===== */
         section {
-            margin-bottom: 14px;
-            padding: 10px;
+            margin-bottom: 16px;
+            padding: 15px;
             border: 1px solid #ccc;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
 
         section h2 {
@@ -97,107 +100,121 @@
         }
 
         .info {
-            margin-left: 14px;
+            margin-left: 10px;
         }
 
-        /* Responsivo simples */
+        /* ===== RESPONSIVO ===== */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
                 align-items: center;
             }
+
+            .container {
+                margin: 15px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
-<body>
-    <nav>
-<ul>
-    <li><a href="index.html">Início</a></li>
-    <li>
-        <a href="#">Menu</a>
-        <ul>
-            <li>
-                <a href="#">Vagas</a>
-                <ul>
-                    <li>
-                        <a href="vagas.html" target="_blank">Listagem Atual</a>
-                    </li>
-                    <li>
-                        <a href="historico.html" target="_blank">Histórico de Vagas</a>
-                    </li>
-                </ul>
-            </li>
 
-            <li>
-                <a href="convivencia.html" target="_blank">Dicas de Convivência</a>
-            </li>
-            <li>
-                <a href="ideias" target="_blank">Idéias Futuras</a>
-            </li>
-        </ul>
-    </li>
-</ul>
-    </nav>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li>
+            <a href="#">Menu</a>
+            <ul>
+                <li>
+                    <a href="#">Vagas</a>
+                    <ul>
+                        <li><a href="vagas.html" target="_blank">Listagem Atual</a></li>
+                        <li><a href="historico.html" target="_blank">Histórico de Vagas</a></li>
+                    </ul>
+                </li>
+                <li><a href="convivencia.html" target="_blank">Dicas de Convivência</a></li>
+                <li><a href="ideias.html" target="_blank">Ideias Futuras</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+
     <h1>Informações Úteis do Edifício</h1>
+
     <section>
         <h2>Próxima Assembleia ⚖️</h2>
         <p class="info">---</p>
     </section>
+
     <section>
         <h2>Horários para Obras 🚧 🧰</h2>
         <p class="info">
             <span class="highlight">Seg à Sexta:</span> 09:00 às 18:00hrs<br>
             <span class="highlight">Sáb:</span> 09:00 às 15:00hrs<br>
-            <span class="highlight">EcoPonto Guarulhos: </span><a href="https://www.google.com/maps/dir/Rua+Monte+Negro,+45+-+Vila+Galv%C3%A3o,+Guarulhos+-+SP/Rua+Ipiranga,+543+Altura+Do+N%C3%BAmero+615+Da,+Av.+Pedro+de+Souza+Lopes+-+Vila+Galv%C3%A3o,+Guarulhos+-+SP,+07074-120/@-23.4490478,-46.5697503,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x94cef5b31df8a341:0x4d83569fb96cc5fb!2m2!1d-46.5666691!2d-23.449816!1m5!1m1!1s0x94cef50b7519c5bd:0x4227d6987cb86e90!2m2!1d-46.5677055!2d-23.4482894?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Localização</a>
+            <span class="highlight">EcoPonto Guarulhos:</span>
+            <a href="https://www.google.com/maps" target="_blank">Localização</a>
         </p>
     </section>
+
     <section>
         <h2>Horários para Mudanças 🚚📦</h2>
         <p class="info">
             <span class="highlight">Seg à Sexta:</span> 08:00 às 18:00hrs*<br>
             <span class="highlight">Sáb:</span> 09:00 às 18:00hrs*<br>
-            <span class="highlight">*Nota:</span> <b>Utilizem sempre o elevador de serviço.</b><br>
+            <span class="highlight">*Nota:</span> <b>Utilizem sempre o elevador de serviço.</b>
         </p>
     </section>
+
     <section>
         <h2>Horários de Lixo 🗑️</h2>
         <p class="info">
             <span class="highlight">Lixo comum:</span> Qualquer dia e horário*<br>
-            <span class="highlight">Lixo reciclável:</span> Apenas Segundas-Feiras* - <b>Horário limite:</b> 19hrs<br>
-            <span class="highlight">*Nota:</span> <b>Utilizem sempre o elevador de serviço.</b><br>
-            <span class="highlight">EcoPonto Guarulhos: </span><a href="https://www.google.com/maps/dir/Rua+Monte+Negro,+45+-+Vila+Galv%C3%A3o,+Guarulhos+-+SP/Rua+Ipiranga,+543+Altura+Do+N%C3%BAmero+615+Da,+Av.+Pedro+de+Souza+Lopes+-+Vila+Galv%C3%A3o,+Guarulhos+-+SP,+07074-120/@-23.4490478,-46.5697503,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x94cef5b31df8a341:0x4d83569fb96cc5fb!2m2!1d-46.5666691!2d-23.449816!1m5!1m1!1s0x94cef50b7519c5bd:0x4227d6987cb86e90!2m2!1d-46.5677055!2d-23.4482894?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Localização</a>
+            <span class="highlight">Lixo reciclável:</span> Apenas Segundas-Feiras* – <b>Até 19h</b><br>
+            <span class="highlight">*Nota:</span> <b>Utilizem sempre o elevador de serviço.</b>
         </p>
     </section>
+
     <section>
         <h2>Vagas de Estacionamento 🚗 🏍</h2>
         <p class="info">
-            <b>Carro:</b> Permitido carro e moto na mesma vaga, desde que esteja dentro dos limites demarcados.<br>
-            <b>Moto:</b> As 2 vagas disponíveis para motos, é rotativa.<br>
-            <b>Visitante:</b> As vagas disponíveis são EXCLUSIVAMENTE DE VISITAS. Morador não deverá utilizá-la, sendo passível de multa.
+            <b>Carro:</b> Carro e moto na mesma vaga, dentro da demarcação.<br>
+            <b>Moto:</b> 2 vagas rotativas.<br>
+            <b>Visitante:</b> Uso exclusivo de visitantes (sujeito a multa).
         </p>
     </section>
+
     <section>
         <h2>Telefones Úteis 📞</h2>
         <p class="info">
-            <span class="highlight">Síndico (Rinaldo):</span> 11 94750-8475 ou <b>E-mail:</b> lsc@lscadministradora.com.br<br>
-            <span class="highlight">Adminsitradora LSC: </span> 11 2475-3150 <br>
-            <span class="highlight">Construtor (Gabriel):</span> 11 94754-5475.
+            <span class="highlight">Síndico (Rinaldo):</span> 11 94750-8475<br>
+            <span class="highlight">Administradora LSC:</span> 11 2475-3150<br>
+            <span class="highlight">Construtor (Gabriel):</span> 11 94754-5475
         </p>
     </section>
+
     <section>
         <h2>Aplicativo LSC Administradora 📲</h2>
         <p class="info">
-            URL: <a href="https://lscadministrado.superlogica.net/clients/areadocondomino" target="_blank">Área do Condômino</a><br>
-            Ou via Play Store ou App Store: <span class="highlight">Aplicativo Condomínio (da Superlogica)</span>
+            <a href="https://lscadministrado.superlogica.net/clients/areadocondomino" target="_blank">
+                Área do Condômino
+            </a><br>
+            App: <span class="highlight">Condomínio (Superlógica)</span>
         </p>
     </section>
+
     <section>
         <h2>Aplicativo Gotham Portaria 📲</h2>
         <p class="info">
-            URL: <a href="https://www.gothamportaria.com.br/" target="_blank">Site da Empresa</a><br>
-            Ou via Play Store: <a href="https://play.google.com/store/apps/details?id=br.com.center.gothamportaria&hl=pt_BR" target="_blank">Android</a><br>
-            Ou App Store: <a href="https://apps.apple.com/ie/app/gotham-portaria/id1613218432" target="_blank">iOS</a><br>
+            <a href="https://www.gothamportaria.com.br/" target="_blank">Site</a><br>
+            <a href="https://play.google.com/store/apps/details?id=br.com.center.gothamportaria" target="_blank">Android</a><br>
+            <a href="https://apps.apple.com/ie/app/gotham-portaria/id1613218432" target="_blank">iOS</a>
         </p>
     </section>
+
+</div>
+
 </body>
 </html>
